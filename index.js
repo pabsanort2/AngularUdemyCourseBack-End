@@ -1,7 +1,12 @@
 const express = require("express");
+const connectDB = require('./config/db');
 
 // Create the express server
 const app = express();
+
+// Connect to DB
+
+connectDB();
 
 // Define route
 
