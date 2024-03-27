@@ -9,3 +9,7 @@ the front-end project belongs to [this repository](https://github.com/pabsanort2
 * NodeJS
 * MongoDB
 * Also learned about all the management and configuration between all these technologies
+
+## Run the project
+
+To run the project just run npm run dev in the console positioned in the root folder.
