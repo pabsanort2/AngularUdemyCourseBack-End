@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const ProductoSchema = mongoose.Schema({
+// Added the new keyword here for VScode to autocomplete the operations in the controler over the model schema
+const ProductoSchema = new mongoose.Schema({
   nombre: {
     type: String,
     required: true,
