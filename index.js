@@ -8,6 +8,7 @@ const app = express();
 
 connectDB();
 
+// Allow the server to decode JSON objects
 app.use(express.json());
 
 app.use("/api/productos", require("./routes/producto"));
