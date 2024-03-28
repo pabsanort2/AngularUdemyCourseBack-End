@@ -1,5 +1,5 @@
 const express = require("express");
-const connectDB = require('./config/db');
+const connectDB = require("./config/db");
 
 // Create the express server
 const app = express();
@@ -8,14 +8,10 @@ const app = express();
 
 connectDB();
 
-app.use('/api/productos', require("./routes/producto"));
+app.use(express.json());
 
-// Define route
-
-// app.get('/', (req, res) => {
-//     res.send("Hello world")
-// })
+app.use("/api/productos", require("./routes/producto"));
 
 app.listen(4000, () => {
-    console.log("El servidor esta corriendo correctamente")
-})
+  console.log("El servidor esta corriendo correctamente");
+});
