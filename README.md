@@ -9,6 +9,7 @@ the front-end project belongs to [this repository](https://github.com/pabsanort2
 * NodeJS
 * JavaScript
 * MongoDB
+* Postman for the API testing
 * Also learned about all the management and configuration between all these technologies
 
 ## Run the project
