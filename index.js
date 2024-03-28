@@ -8,11 +8,13 @@ const app = express();
 
 connectDB();
 
+app.use('/api/productos', require("./routes/producto"));
+
 // Define route
 
-app.get('/', (req, res) => {
-    res.send("Hello world")
-})
+// app.get('/', (req, res) => {
+//     res.send("Hello world")
+// })
 
 app.listen(4000, () => {
     console.log("El servidor esta corriendo correctamente")
