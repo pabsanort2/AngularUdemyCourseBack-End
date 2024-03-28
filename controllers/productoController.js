@@ -1,19 +1,26 @@
 const Producto = require("../models/Producto");
 
 exports.crearProducto = async (req, res) => {
+  try {
+    let producto;
 
-    try {
-        let producto;
+    // We create the product
+    producto = new Producto(req.body);
 
-        // We create the product
-        producto = new Producto(req.body);
-        
-        await producto.save();
-        res.send(producto);
+    await producto.save();
+    res.send(producto);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Hubo un error");
+  }
+};
 
-    } catch (error) {
-        console.log(error)
-        res.status(500).send("Hubo un error");
-    }
-
-}
+exports.obtenerProductos = async (req, res) => {
+  try {
+    const productos = await Producto.find();
+    res.json(productos);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Hubo un error");
+  }
+};
